@@ -2,37 +2,42 @@
 import { GameLevel, Enemy } from "./types";
 import { v4 as uuidv4 } from "uuid";
 
+// Generate simple IDs if uuid is not available
+const generateId = () => {
+  return uuidv4();
+};
+
 // Demo level for the game
 export const DEMO_LEVEL: GameLevel = {
   width: 2000,
   height: 600,
   platforms: [
     // Ground platforms
-    { id: uuidv4(), x: 0, y: 400, width: 400, height: 20, type: "normal" },
-    { id: uuidv4(), x: 450, y: 400, width: 200, height: 20, type: "normal" },
-    { id: uuidv4(), x: 700, y: 450, width: 300, height: 20, type: "normal" },
-    { id: uuidv4(), x: 1050, y: 400, width: 200, height: 20, type: "normal" },
-    { id: uuidv4(), x: 1300, y: 350, width: 300, height: 20, type: "normal" },
-    { id: uuidv4(), x: 1650, y: 400, width: 350, height: 20, type: "normal" },
+    { id: generateId(), x: 0, y: 400, width: 400, height: 20, type: "normal" },
+    { id: generateId(), x: 450, y: 400, width: 200, height: 20, type: "normal" },
+    { id: generateId(), x: 700, y: 450, width: 300, height: 20, type: "normal" },
+    { id: generateId(), x: 1050, y: 400, width: 200, height: 20, type: "normal" },
+    { id: generateId(), x: 1300, y: 350, width: 300, height: 20, type: "normal" },
+    { id: generateId(), x: 1650, y: 400, width: 350, height: 20, type: "normal" },
     
     // Elevated platforms
-    { id: uuidv4(), x: 100, y: 300, width: 100, height: 20, type: "normal" },
-    { id: uuidv4(), x: 350, y: 250, width: 100, height: 20, type: "normal" },
-    { id: uuidv4(), x: 550, y: 300, width: 100, height: 20, type: "normal" },
-    { id: uuidv4(), x: 800, y: 350, width: 100, height: 20, type: "normal" },
-    { id: uuidv4(), x: 1100, y: 300, width: 100, height: 20, type: "normal" },
-    { id: uuidv4(), x: 1400, y: 250, width: 100, height: 20, type: "normal" },
+    { id: generateId(), x: 100, y: 300, width: 100, height: 20, type: "normal" },
+    { id: generateId(), x: 350, y: 250, width: 100, height: 20, type: "normal" },
+    { id: generateId(), x: 550, y: 300, width: 100, height: 20, type: "normal" },
+    { id: generateId(), x: 800, y: 350, width: 100, height: 20, type: "normal" },
+    { id: generateId(), x: 1100, y: 300, width: 100, height: 20, type: "normal" },
+    { id: generateId(), x: 1400, y: 250, width: 100, height: 20, type: "normal" },
     
     // Walls
-    { id: uuidv4(), x: 250, y: 300, width: 20, height: 100, type: "normal" },
-    { id: uuidv4(), x: 600, y: 300, width: 20, height: 100, type: "normal" },
-    { id: uuidv4(), x: 950, y: 350, width: 20, height: 100, type: "normal" },
-    { id: uuidv4(), x: 1250, y: 300, width: 20, height: 100, type: "normal" },
-    { id: uuidv4(), x: 1550, y: 250, width: 20, height: 100, type: "normal" },
+    { id: generateId(), x: 250, y: 300, width: 20, height: 100, type: "normal" },
+    { id: generateId(), x: 600, y: 300, width: 20, height: 100, type: "normal" },
+    { id: generateId(), x: 950, y: 350, width: 20, height: 100, type: "normal" },
+    { id: generateId(), x: 1250, y: 300, width: 20, height: 100, type: "normal" },
+    { id: generateId(), x: 1550, y: 250, width: 20, height: 100, type: "normal" },
   ],
   enemies: [
     {
-      id: uuidv4(),
+      id: generateId(),
       type: "blazer-drone",
       x: 300,
       y: 350,
@@ -49,7 +54,7 @@ export const DEMO_LEVEL: GameLevel = {
       attackRange: 50
     },
     {
-      id: uuidv4(),
+      id: generateId(),
       type: "blazer-drone",
       x: 700,
       y: 400,
@@ -66,7 +71,7 @@ export const DEMO_LEVEL: GameLevel = {
       attackRange: 50
     },
     {
-      id: uuidv4(),
+      id: generateId(),
       type: "gutter-hacker",
       x: 1200,
       y: 350,
